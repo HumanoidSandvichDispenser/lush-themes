@@ -45,6 +45,7 @@ return lush.extends({ base }).with(function()
         Accent { fg = magenta },
         Function { fg = green },
         Special { fg = gray },
-        SpecialChar { fg = magenta }
+        SpecialChar { fg = magenta },
+        Type { fg = blue },
     }
 end)
