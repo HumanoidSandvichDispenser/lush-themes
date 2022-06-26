@@ -39,13 +39,23 @@ local base = require("base-theme")({
 return lush.extends({ base }).with(function()
     return {
         Keyword { fg = red },
-        Identifier { fg = blue },
+
+        Identifier { fg = fg0 },
+
         String { fg = yellow },
+
         Character { fg = magenta },
+
         Accent { fg = magenta },
+
         Function { fg = green },
+
         Special { fg = gray },
+
         SpecialChar { fg = magenta },
+
         Type { fg = blue },
+
+        Operator { fg = red },
     }
 end)

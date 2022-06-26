@@ -41,5 +41,13 @@ return lush.extends({ base }).with(function()
         Keyword { fg = red, gui = "bold" },
 
         Character { fg = magenta },
+
+        Function { fg = cyan },
+
+        Statement { fg = orange },
+
+        Constant { fg = blue },
+
+        Identifier { fg = blue },
     }
 end)

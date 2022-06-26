@@ -41,5 +41,7 @@ return lush.extends({ base }).with(function()
         texCmd { fg = cyan },
 
         texCmdItem { fg = magenta },
+
+        Operator { fg = cyan }
     }
 end)

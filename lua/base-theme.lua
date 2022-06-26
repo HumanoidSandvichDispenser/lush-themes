@@ -8,6 +8,8 @@ return function (colors)
         return {
             Accent { fg = colors.accent },
 
+            --Error { fg = colors.bg0, bg = colors.red },
+
             Title { Accent },
 
             Underlined { Title, gui = "underline" },
@@ -144,6 +146,10 @@ return function (colors)
 
             FelineCommandMode { FelineNormalMode, bg = colors.magenta },
 
+            FelineError { fg = colors.red, bg = colors.bg0 },
+
+            FelineWarning { fg = colors.yellow, bg = colors.bg0 },
+
             FelineDefault { Normal, fg = colors.gray },
 
             TSTagAttribute { gui = "bold" },
@@ -173,6 +179,8 @@ return function (colors)
             BufferInactiveMod { BufferVisibleMod },
 
             texEnvArgName { Type },
+
+            Folded { fg = colors.gray, bg = colors.bg2 },
         }
     end)
 end
