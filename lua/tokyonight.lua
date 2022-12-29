@@ -40,8 +40,6 @@ return lush.extends({ base }).with(function()
     return {
         Keyword { fg = red },
 
-        Identifier { fg = fg0 },
-
         String { fg = yellow },
 
         Character { fg = magenta },

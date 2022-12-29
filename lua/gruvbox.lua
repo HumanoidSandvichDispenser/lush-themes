@@ -47,7 +47,5 @@ return lush.extends({ base }).with(function()
         Statement { fg = orange },
 
         Constant { fg = blue },
-
-        Identifier { fg = blue },
     }
 end)

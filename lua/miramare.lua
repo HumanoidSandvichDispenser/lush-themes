@@ -48,8 +48,6 @@ return lush.extends({ base }).with(function()
 
         Operator { fg = orange },
 
-        Identifier { fg = blue },
-
         Accent { fg = cyan }
     }
 end)

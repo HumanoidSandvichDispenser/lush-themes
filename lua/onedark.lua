@@ -36,12 +36,15 @@ local base = require("base-theme")({
     accent = blue,
 })
 
-return lush.extends({ base }).with(function()
+return lush.extends({ base }).with(function(inject)
+    local sym = inject.sym
     return {
         texCmd { fg = cyan },
 
         texCmdItem { fg = magenta },
 
-        Operator { fg = cyan }
+        Operator { fg = cyan },
+
+        sym("@field"){ fg = red },
     }
 end)

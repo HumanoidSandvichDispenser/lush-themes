@@ -2,9 +2,9 @@
 -- there aren't any problems about colorschemes defining too many highlights.
 
 local lush = require("lush")
-
 return function (colors)
-    return lush(function()
+    return lush(function(inject)
+        local sym = inject.sym
         return {
             Accent { fg = colors.accent },
 
@@ -68,7 +68,13 @@ return function (colors)
 
             Todo { fg = colors.red, gui = "italic" },
 
-            Identifier { fg = colors.cyan },
+            Identifier { fg = colors.fg0 },
+
+            sym("@parameter") { fg = colors.orange },
+
+            sym("@field") { fg = colors.blue },
+
+            sym("@property") { sym("@field") },
 
             String { fg = colors.green },
 
@@ -181,6 +187,10 @@ return function (colors)
             texEnvArgName { Type },
 
             Folded { fg = colors.gray, bg = colors.bg2 },
+
+            sym("@tag") { Function },
+
+            sym("@tag.attribute") { Constant },
         }
     end)
 end
