@@ -45,6 +45,14 @@ return lush.extends({ base }).with(function(inject)
 
         Operator { fg = cyan },
 
+        Keyword { fg = magenta },
+
         sym("@field"){ fg = red },
+
+        sym("@type.builtin"){ fg = magenta },
+
+        sym("@type.qualifier"){ fg = magenta },
+
+        sym("@variable") { fg = red },
     }
 end)
