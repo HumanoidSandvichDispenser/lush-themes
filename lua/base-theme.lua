@@ -188,9 +188,29 @@ return function (colors)
 
             Folded { fg = colors.gray, bg = colors.bg2 },
 
+            sym("@variable") { fg = colors.fg0 },
+
+            sym("@variable.fennel") { fg = colors.fg0 },
+
+            sym("@variable.member.fennel") { fg = colors.fg0 },
+
             sym("@tag") { Function },
 
             sym("@tag.attribute") { Constant },
+
+            sym("@type.qualifier") { Keyword },
+
+            sym("@type.builtin") { Keyword },
+
+            sym("@variable.builtin") { Constant },
+
+            sym("@constructor") { Type },
+
+            RainbowDelimiterFirst { fg = colors.blue },
+
+            RainbowDelimiterSecond { fg = colors.magenta },
+
+            RainbowDelimiterThird { fg = colors.green },
         }
     end)
 end
