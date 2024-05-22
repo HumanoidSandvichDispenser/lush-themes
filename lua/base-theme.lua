@@ -211,6 +211,50 @@ return function (colors)
             RainbowDelimiterSecond { fg = colors.magenta },
 
             RainbowDelimiterThird { fg = colors.green },
+
+            NeogitSectionHeader { fg = colors.accent, gui = "bold" },
+
+            NeogitHunkHeader { bg = colors.bg3 },
+
+            NeogitHunkHeaderCursor { fg = colors.bg0, bg = NeogitSectionHeader.fg },
+
+            NeogitHunkHeaderHighlight { fg = colors.bg0, bg = NeogitSectionHeader.fg },
+
+            NeogitDiffContextHighlight { bg = colors.bg0.darken(5) },
+
+            NeogitDiffContextCursor { },
+
+            NeogitChangeModified { NeogitSectionHeader },
+
+            NeogitDiffAdd {
+                fg = DiffAdd.fg.desaturate(50).darken(25),
+                bg = DiffAdd.fg.desaturate(75).darken(75)
+            },
+
+            NeogitDiffAddHighlight {
+                fg = DiffAdd.fg,
+                bg = DiffAdd.fg.desaturate(75).darken(70)
+            },
+
+            NeogitDiffAddCursor {
+                fg = DiffAdd.fg,
+                bg = DiffAdd.fg.desaturate(75).darken(75)
+            },
+
+            NeogitDiffDelete {
+                fg = DiffDelete.fg.desaturate(50).darken(25),
+                bg = DiffDelete.fg.desaturate(75).darken(75)
+            },
+
+            NeogitDiffDeleteHighlight {
+                fg = DiffDelete.fg,
+                bg = DiffDelete.fg.desaturate(75).darken(70)
+            },
+
+            NeogitDiffDeleteCursor {
+                fg = DiffDelete.fg,
+                bg = DiffDelete.fg.desaturate(75).darken(75)
+            },
         }
     end)
 end

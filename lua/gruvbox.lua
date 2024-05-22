@@ -47,5 +47,11 @@ return lush.extends({ base }).with(function()
         Statement { fg = orange },
 
         Constant { fg = blue },
+
+        NeogitSectionHeader { fg = cyan },
+
+        NeogitHunkHeaderCursor { fg = colors.bg0, bg = NeogitSectionHeader.fg },
+
+        NeogitHunkHeaderHighlight { fg = colors.bg0, bg = NeogitSectionHeader.fg },
     }
 end)
