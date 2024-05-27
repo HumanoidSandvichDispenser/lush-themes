@@ -38,22 +38,39 @@ local base = require("base-theme")({
 
 return lush.extends({ base }).with(function()
     return {
-        Keyword { fg = red },
+        Keyword { fg = magenta },
 
         String { fg = yellow },
 
-        Character { fg = magenta },
+        Constant { fg = red },
 
         Accent { fg = magenta },
 
-        Function { fg = green },
+        Function { fg = blue },
 
         Special { fg = gray },
 
         SpecialChar { fg = magenta },
 
-        Type { fg = blue },
+        Type { fg = cyan },
 
-        Operator { fg = red },
+        Operator { fg = cyan },
+
+        DiffAdd { fg = cyan },
+
+        NeogitDiffAdd {
+            fg = DiffAdd.fg.desaturate(50).darken(25),
+            bg = DiffAdd.fg.desaturate(75).darken(75)
+        },
+
+        NeogitDiffAddHighlight {
+            fg = DiffAdd.fg,
+            bg = DiffAdd.fg.desaturate(75).darken(70)
+        },
+
+        NeogitDiffAddCursor {
+            fg = DiffAdd.fg,
+            bg = DiffAdd.fg.desaturate(75).darken(75)
+        },
     }
 end)
