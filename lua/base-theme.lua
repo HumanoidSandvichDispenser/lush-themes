@@ -188,9 +188,13 @@ return function (colors)
 
             Folded { fg = colors.gray, bg = colors.bg2 },
 
+            FoldColumn { fg = colors.gray, bg = colors.bg0 },
+
             sym("@tag") { Function },
 
             sym("@tag.attribute") { Constant },
+
+            sym("@type.qualifier") { Keyword },
         }
     end)
 end
